@@ -9,10 +9,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements AfterViewInit {
-  title = 'seven-anniversary';
-
-  ngAfterViewInit() {
+export class AppComponent {
+  ngOnInit() {
     this.createFireworks();
   }
 
