@@ -329,7 +329,7 @@ export class AppComponent implements AfterViewInit {
       }
 
       // 隨機發射新的火箭
-      if (Math.random() < 0.02 && rockets.length < 3) {
+      if (Math.random() < 0.02 && rockets.length < 5) {
         const x = Math.random() * canvas.width;
         rockets.push(new (Rocket as any)(x, canvas.height));
       }
