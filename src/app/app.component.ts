@@ -71,7 +71,9 @@ export class AppComponent implements AfterViewInit {
     function Rocket(this: any, x: number, y: number) {
       this.x = x;
       this.y = y;
-      this.targetY = y - Math.random() * (canvas.height * 0.6);
+      // 在手機版時，將目標高度調低
+      const targetHeightFactor = window.innerWidth < 768 ? 0.4 : 0.6;
+      this.targetY = y - Math.random() * (canvas.height * targetHeightFactor);
       const pattern = Math.floor(Math.random() * 3);
       switch (pattern) {
         case 0:
